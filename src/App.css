@@ -5,21 +5,38 @@
   padding: 0;
 }
 
+body {
+  margin: 0
+}
+
 .App {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 97vh;
   width: 100vw;
+  margin: auto;
 
 }
 
 .quote-box {
-  width: 700px;
-  height: fit-content;
+  width: 600px;
+  height: max-content;
   background-color: white;
   box-shadow: 2px 2px 8px 5px rgba(0, 0, 0, .3);
   padding: 15px;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 480px) {
+  .quote-box {
+  width: 380px;
+  height: max-content;
+  }
 }
 
 .text-flex {
@@ -28,9 +45,9 @@
 }
 
 .quote-box h4 {
-  margin: auto;
+  margin: 5px auto;
   padding: 5px;
-  text-align: start;
+  text-align: flex-start;
 }
 
 .fa-quote-left {
@@ -39,15 +56,13 @@
 
 
 .quote-box p {
-
-  text-align: end;
-  margin:  0 auto;
-  padding: 20px;
+  align-self: flex-end;
+  margin-top: 1px;
+  padding: 5px;
 }
 
 button {
-  margin: 0 auto;
-  margin-left: 650px;
+  align-self: flex-end;
   width: 50px;
   height: 50px;
   border-radius: 50px;
@@ -68,7 +83,6 @@ button:hover {
   cursor: pointer;
   text-shadow: -2px 2px 1px rgba(0, 0, 0, 0.3);
 }
-
 
 
 
